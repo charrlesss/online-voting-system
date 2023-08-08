@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Anek+Gurmukhi:wght@100;200;400&family=Bebas+Neue&family=Pathway+Gothic+One&display=swap");
+.container-verify-account {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.container-verify-account .instructions {
+  width: 350px;
+  height: 410px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.75);
+  left: 8%;
+  top: 20%;
+  position: absolute;
+  font-family: "Bebas Neue", cursive;
+  padding: 0 20px;
+}
+
+.container-verify-account .instructions h2 {
+  text-align: center;
+  padding: 5px 0;
+  margin-bottom: 20px;
+  color: #1a237e;
+  letter-spacing: 2px;
+}
+.container-verify-account .instructions p span {
+  color: #ff9800;
+}
+.container-verify-account .verify-step {
+  width: 300px;
+  height: 50px;
+  transform: translate(-50%, -10%);
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-verify-account .first-circle,
+.container-verify-account .second-circle,
+.container-verify-account .third-circle {
+  background-color: #689f38;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.container-verify-account .first-line,
+.container-verify-account .second-line {
+  border-top: 1px solid #689f38;
+  border-bottom: 1px solid #689f38;
+  position: relative;
+  width: 100px;
+  height: 5px;
+}
+
+.container-verify-account .first-line.colored::before,
+.container-verify-account .second-line.colored::before {
+  content: "";
+  display: block;
+  height: 100%;
+  background-color: #689f38;
+  width: 100%;
+  position: relative;
+  animation: forward 1s;
+}
+.container-verify-account .second-line.plain::before,
+.container-verify-account .first-line.plain::before {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 100%;
+  position: relative;
+  background-color: #689f38;
+  animation: backward 1s;
+}
+
+@keyframes forward {
+  0% {
+    width: 0%;
+  }
+}
+@keyframes backward {
+  0% {
+    width: 100%;
+  }
+}
+
+.container-verify-account .first-verify.next,
+.container-verify-account .second-verify.next,
+.container-verify-account .third-verify.next {
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  animation: fadeFirst 1s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+}
+
+@keyframes fadeFirst {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container-verify-account .first-verify .button-bottom,
+.container-verify-account .second-verify .button-bottom,
+.container-verify-account .third-verify .button-bottom {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 0 20px 10px 20px;
+}
+.container-verify-account .first-verify .button-bottom,
+.container-verify-account .second-verify .button-bottom,
+.container-verify-account .third-verify .button-bottom {
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.first-verify .first-verify-content,
+.second-verify .second-verify-content,
+.third-verify .third-verify-content {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  padding: 20px 20px;
+}
+.second-verify-content .video,
+.first-verify-content .video {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.second-verify-content .capture,
+.first-verify-content .capture {
+  width: 100%;
+  height: 98%;
+  position: relative;
+}
+.second-verify-content .image-bg,
+.first-verify-content .image-bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.second-verify-content .loader-bg,
+.first-verify-content .loader-bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.third-verify-content .third-verify-input-content {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+}
+.third-verify-content .third-verify-input-content.border {
+  border-bottom: 1px solid gray;
+}
+.third-verify-input-content .title-content {
+  font-family: sans-serif;
+  letter-spacing: 0.4px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px 10px !important;
+  margin: 0;
+}
+.third-verify-content .voterId-digit {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-row-gap: 10px;
+  grid-column-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
+}
+.third-verify-content .button-container {
+  width: fit-content;
+  height: auto;
+  margin-top: 15px;
+  align-self: flex-end;
+}
+.third-verify-content .input-container {
+  width: fit-content;
+  height: auto;
+  position: relative;
+}
+.input-container .dash {
+  width: 35px;
+  height: 100%;
+  position: relative;
+}
+.input-container .dash::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #7986cb;
+}
+
+.third-verify-content .voterId-digit input {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  overflow: hidden;
+  text-align: center;
+  font-size: 18px;
+  outline: 2px solid #7986cb;
+}
+.third-verify-content .voterId-digit input:focus {
+  outline-color: #2196f3;
+}
+/* loader */
+
+.loader-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  flex-direction: column;
+}
+.loader-content {
+  text-align: center;
+}
+.loader-title {
+  font-size: 22px;
+}
+.loader-text {
+  font-size: 18px;
+}
+.loader-text,
+.loader-title {
+  margin-left: 10px;
+  font-family: sans-serif;
+}
+.lds-ellipsis {
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 53%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #d8c6c4;
+  animation-timing-function: cubic-bezier(0, 5, 5, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 13px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 13px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 37px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 61px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+.waiting-container {
+  position: absolute;
+  width: 500px;
+  height: 450px;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.waiting-container .waiting-content-text {
+  width: 500px;
+  height: auto;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+}
+.waiting-content-text .first-p {
+  font-family: sans-serif;
+  letter-spacing: 0.4px;
+  font-size: 23px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.waiting-content-text .second-p {
+  font-family: sans-serif;
+  letter-spacing: 0.4px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+.waiting-content-text .third-p {
+  font-family: sans-serif;
+  letter-spacing: 0.4px;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+.waiting-container img {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+}
+
+.success-container {
+  position: absolute;
+  width: 500px;
+  height: 450px;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.success-container img {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 47%;
+  transform: translateX(-50%);
+}
+
+.success-container .success-content-text {
+  width: 500px;
+  height: auto;
+  text-align: center;
+  position: absolute;
+  bottom: -20%;
+  right: 0;
+  left: 0;
+}
+
+.success-content-text .first-p {
+  font-family: sans-serif;
+  letter-spacing: 0.4px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.success-content-text .second-p {
+  font-family: sans-serif;
+  letter-spacing: 0.4px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}

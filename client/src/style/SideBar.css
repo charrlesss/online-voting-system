@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Teko:wght@700&display=swap');
+
+.sidebar-conainer{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3px;
+    margin: 2px;
+    border: 2px solid transparent;
+}
+.sidebar-conainer.active{
+    background-color: #546e7a;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 2px;
+}
+.sidebar-conainer-for-name{
+    transition:width 1s;
+    flex: 80%;
+    margin: 2px 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+
+}
+
+.sidebar-conainer-for-icon{
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    margin: 2px 4px;
+    cursor: pointer;
+    
+}
+
+.sidebar-conainer.logout:hover,
+.sidebar-conainer:not(.active):hover{
+    background-color: #546e7a;
+    border: 2px solid white;
+    border-radius: 10px;
+  
+}
+
+.sidebar-conainer-for-icon.animateNameHide{
+    flex: 100%;
+    transition: transform 250ms;
+}
+
+
+.sidebar-conainer-for-name.animateNameHide{
+    animation-delay: 3.5s;
+    flex: none;
+     display: none;
+}
+
+.sidebar-conainer:not(.active) .sidebar-conainer-for-icon.animateNameHide.logout:hover::before,
+.sidebar-conainer:not(.active) .sidebar-conainer-for-icon.animateNameHide.OVERVIEW:hover::before ,
+.sidebar-conainer:not(.active) .sidebar-conainer-for-icon.animateNameHide.VERIFY:hover::before,
+.sidebar-conainer:not(.active) .sidebar-conainer-for-icon.animateNameHide.VOTE:hover::before,
+.sidebar-conainer:not(.active) .sidebar-conainer-for-icon.animateNameHide.CANDIDATES:hover::before,
+.sidebar-conainer:not(.active) .sidebar-conainer-for-icon.animateNameHide.RESULT:hover::before,
+.sidebar-conainer:not(.active) .sidebar-conainer-for-icon.animateNameHide.ABOUT:hover::before{
+    width: 110px;
+    height: auto;
+    display:block;
+    position:absolute;
+    left:110%;
+    font-size: 15px;
+    height: 38px;
+    padding: 2px 4px;
+    color: rgb(38, 50, 56);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: hoverMe 0.3s;
+    z-index: 200;
+    box-shadow: 0 0 3px grey;
+    background-color: whitesmoke;
+    font-weight: 600;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+@keyframes hoverMe {
+    0%{
+        width:0;
+    }
+}
+.sidebar-conainer:not(.active) .sidebar-conainer-for-icon.animateNameHide.logout:hover::before{
+    content: "LOG-OUT";
+}
+.sidebar-conainer:not(.active) .sidebar-conainer-for-icon.animateNameHide.OVERVIEW:hover::before{
+    content: "OVERVIEW";
+    
+}
+.sidebar-conainer:not(.active)  .sidebar-conainer-for-icon.animateNameHide.VERIFY:hover::before{
+    content: "VERIFY ACCOUNT";
+}
+.sidebar-conainer:not(.active)  .sidebar-conainer-for-icon.animateNameHide.VOTE:hover::before{
+    content: "VOTE";
+}
+.sidebar-conainer:not(.active)  .sidebar-conainer-for-icon.animateNameHide.CANDIDATES:hover::before{
+    content: "CANDIDATES & POSITION";
+    justify-content: start;
+}
+.sidebar-conainer:not(.active)  .sidebar-conainer-for-icon.animateNameHide.RESULT:hover::before{
+    content: "RESULT"; 
+}
+.sidebar-conainer:not(.active)  .sidebar-conainer-for-icon.animateNameHide.ABOUT:hover::before{
+    content: "ABOUT";
+}
+
+.image {
+    width: 100%;
+    height: 180px;
+    position: absolute;
+    opacity: 0;
+    -webkit-animation-name: image;
+            animation-name: image;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 12s;
+            animation-duration: 12s;
+}
+
+   .image:nth-child(1) {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+  }
+  
+  .image:nth-child(2) {
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+  }
+  
+  .image:nth-child(3) {
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+  }
+  
+  .image:nth-child(4) {
+    -webkit-animation-delay: 9s;
+            animation-delay: 9s;
+  }
+
+

@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Anek+Gurmukhi:wght@100;200;400&family=Bebas+Neue&family=Pathway+Gothic+One&family=Plus+Jakarta+Sans:wght@200&display=swap');
+
+.about-main-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.about-main-container .title{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.title-content{
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    margin: 15px;
+    padding: 20px;
+}
+
+.about-main-container .title h1{
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.about-main-container .title p{
+    font-family: 'Alata', sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+.about-main-container .content-express{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.content-express-con{
+    display: flex;
+    width: 870px;
+    height: fit-content;
+    align-items: center;
+}
+.content-express-con .content-express-text{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-left: 10px;
+}
+.content-express-text h2{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+.content-express-text p{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 1000;
+    font-size: 18px;
+    opacity: 0.9;
+    line-height: 30px;
+}
+.about-main-container  .basic-info-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    padding: 10px 50px;
+    column-gap: 10px;
+}
+
+.basic-info-container .basic-info-first-content,
+.basic-info-container .basic-info-second-content,
+.basic-info-container .basic-info-third-content{
+    border-radius: 15px;
+    height: fit-content;
+    padding:20px 0 20px 20px;
+    box-shadow: 0 0 3px gray;
+    width: 100%;
+}
+.basic-info-container .basic-info-second-content{
+    margin-bottom: 50px;
+}
+.basic-info-container .basic-info-first-content h3,
+.basic-info-container .basic-info-second-content h3,
+.basic-info-container .basic-info-third-content h3{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-bottom: 10px;
+}
+.basic-info-third-content .basic-info-first-content-image,
+.basic-info-second-content .basic-info-first-content-image,
+.basic-info-first-content .basic-info-first-content-image{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 3px 20px;
+    column-gap: 20px;
+}
+.about-main-container.profile .basic-info-first-content-image.profile,
+.about-main-container.fullname .basic-info-first-content-image.fullname,
+.about-main-container.birthdate .basic-info-first-content-image.birthdate,
+.about-main-container.gender .basic-info-first-content-image.gender,
+.about-main-container.municipality .basic-info-first-content-image.zipcode,
+.about-main-container.zipcode .basic-info-first-content-image.municipality,
+.about-main-container.address .basic-info-first-content-image.address,
+.about-main-container.email .basic-info-first-content-image.email,
+.about-main-container.password .basic-info-first-content-image.password{
+    border-bottom: 2px solid #2196f3;
+    background-color: rgb(245, 245, 245);
+}
+
+.update-field-container-not-active{
+    display: none;
+  
+}
+.update-field-container-active{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+.about-main-container .edit-content{
+    box-shadow: 0 0 3px gray;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    z-index: 13;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 4px 0.2px rgb(68, 67, 67);
+    overflow: hidden;
+    display: none;
+}
+
+.about-main-container.profile .edit-content.profile,
+.about-main-container.fullname .edit-content.fullname,
+.about-main-container.birthdate .edit-content.birthdate,
+.about-main-container.gender .edit-content.gender,
+.about-main-container.zipcode .edit-content.zipcode,
+.about-main-container.municipality .edit-content.municipality,
+.about-main-container.address .edit-content.address,
+.about-main-container.email .edit-content.email,
+.about-main-container.password .edit-content.password{
+    display: block;
+    padding: 20px;
+}
+.about-main-container.profile .edit-content.profile .custom-botton,
+.about-main-container.fullname .edit-content.fullname .custom-botton,
+.about-main-container.birthdate .edit-content.birthdate .custom-botton,
+.about-main-container.gender .edit-content.gender .custom-botton,
+.about-main-container.zipcode .edit-content.zipcode .custom-botton,
+.about-main-container.municipality .edit-content.municipality .custom-botton,
+.about-main-container.address .edit-content.address .custom-botton{
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.about-main-container.profile .edit-content.profile h2,
+.about-main-container.fullname .edit-content.fullname h2,
+.about-main-container.birthdate .edit-content.birthdate h2,
+.about-main-container.gender .edit-content.gender h2,
+.about-main-container.zipcode .edit-content.zipcode h2,
+.about-main-container.municipality .edit-content.municipality h2,
+.about-main-container.address .edit-content.address h2,
+.about-main-container.email .edit-content.email h2,
+.about-main-container.password .edit-content.password h2{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: capitalize;
+}
+.about-main-container.fullname .edit-content.fullname h2,
+.about-main-container.birthdate .edit-content.birthdate h2,
+.about-main-container.gender .edit-content.gender h2,
+.about-main-container.zipcode .edit-content.zipcode h2,
+.about-main-container.municipality .edit-content.municipality h2,
+.about-main-container.address .edit-content.address h2,
+.about-main-container.email .edit-content.email h2,
+.about-main-container.password .edit-content.password h2{
+    margin: 50px 0;
+}
+.basic-info-third-content .basic-info-first-content-image:hover ,
+.basic-info-second-content .basic-info-first-content-image:hover ,
+.basic-info-first-content .basic-info-first-content-image:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.basic-info-first-content .basic-info-first-content-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.basic-info-third-content .basic-info-first-content-image h5,
+.basic-info-second-content .basic-info-first-content-image h5,
+.basic-info-first-content .basic-info-first-content-image h5{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 10px;
+    width: 100px;
+
+}
+.basic-info-third-content .basic-info-first-content-image .messages,
+.basic-info-second-content .basic-info-first-content-image .messages,
+.basic-info-first-content .basic-info-first-content-image .messages{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: .7px;
+    flex: 1;
+    padding-left: 20px;
+}
+.basic-info-third-content-image  .last-content,
+.basic-info-second-content-image  .last-content,
+.basic-info-first-content-image  .last-content{
+    width: 60px;
+    height: 60px;
+    position:relative;
+    display: flex;
+    align-items: center;
+}

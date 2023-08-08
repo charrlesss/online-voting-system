@@ -1,0 +1,117 @@
+
+.formContainerForVerify {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 20%;
+    height: auto;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    padding: 20px 0;
+    -webkit-box-shadow: 0 0 4px 0px grey;
+            box-shadow: 0 0 4px 0px grey;
+  }
+  
+  .formContainerForVerify .button {
+    position: absolute;
+    top: 80%;
+    left: 90%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border: none;
+    background: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .formContainerForVerify .button span {
+    margin-right: 5px;
+  }
+  
+  .formContainerForVerify .button:hover {
+    color: gray;
+  }
+  
+  .formContainerForVerify .text-container {
+    position: relative;
+    width: auto;
+    height: auto;
+  }
+  
+  .formContainerForVerify .child-text-container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 20px;
+  }
+  
+  .formContainerForVerify .child-text-container p {
+    margin: 0 10px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  .formContainerForVerify .text-container .title {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    letter-spacing: 2.4px;
+    word-spacing: 1.2px;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    padding-left: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .codeVerify {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: auto;
+  }
+  
+  .codeVerify input {
+    width: 40px;
+    height: 45px;
+    text-align: center;
+    border: none;
+    margin: 10px;
+    -webkit-box-shadow: 0px 0px 6px 2px lightgray;
+            box-shadow: 0px 0px 6px 2px lightgray;
+    border-radius: 15px;
+    outline: none;
+    font-size: 1.5em;
+  }
+  
+  .codeVerify input:focus {
+    -webkit-box-shadow: 0px 0px 6px 2px lightskyblue;
+            box-shadow: 0px 0px 6px 2px lightskyblue;
+    position: relative;
+    top: 0;
+  }

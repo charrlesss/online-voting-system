@@ -1,0 +1,71 @@
+
+.about-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    position: relative;
+   
+  }
+ 
+  .about-form .formBg-container {
+   
+    width: 100%;
+    height: 80%;
+    background-image: url("../../public/vote_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #78cff8;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  
+  .title-form-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #00bcd4;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .about-form .text {
+    background-color: #00bcd4;
+    width:100%; 
+    height: 20%;
+     position: relative;
+  }
+  .about-form .text  p{
+    font-family: DM Sans, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 2em;
+    margin: 10px;
+    transition: 2s;
+  }
+  
+  .form-form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            
+  }
+ 

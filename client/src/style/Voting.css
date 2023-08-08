@@ -1,0 +1,248 @@
+.voting-main-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.voting-main-container .voting-form {
+  box-shadow: 0px 0px 3px 0.3px black;
+  width: fit-content;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(4, auto);
+}
+
+.voting-form .mayor,
+.voting-form .vicemayor,
+.voting-form .msp {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+}
+.voting-form .mayor .title {
+  background-color: rgba(57, 57, 236, 0.836);
+  color: white;
+}
+.voting-form .vicemayor .title {
+  background-color: rgba(37, 196, 103, 0.836);
+  color: white;
+}
+.voting-form .msp .title {
+  background-color: rgba(57, 57, 236, 0.836);
+  color: white;
+}
+
+.voting-form .mayor .title,
+.voting-form .vicemayor .title,
+.voting-form .msp .title {
+  padding: 10px 0;
+  text-align: center;
+  align-items: center;
+  font-family: sans-serif;
+  letter-spacing: 0.6px;
+  font-size: 22px;
+}
+
+.voting-form .mayor .checkbox-container,
+.voting-form .vicemayor .checkbox-container,
+.voting-form .msp .checkbox-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  padding: 15px;
+}
+
+.checkbox-container .checkbox {
+  box-shadow: 0px 0px 3px 0.3px black;
+  grid-gap: 20px;
+  padding: 5px;
+}
+
+.voting-form .button {
+  height: 40px;
+  grid-column: span 3;
+  margin: 10px 10px 20px 10px;
+}
+
+
+.loader-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  flex-direction: column;
+}
+.loader-content {
+  text-align: center;
+}
+.loader-title {
+  font-size: 22px;
+}
+.loader-text {
+  font-size: 18px;
+}
+.loader-text,
+.loader-title {
+  margin-left: 10px;
+  font-family: sans-serif;
+}
+.lds-ellipsis {
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 53%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #d8c6c4;
+  animation-timing-function: cubic-bezier(0, 5, 5, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 13px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 13px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 37px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 61px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+.vote-container {
+  width: 350px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0px 0px 3px 0.3px black;
+}
+.vote-container .title{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.vote-container .title h2{
+  font-family: Arial;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px 0;
+  letter-spacing: 1px;
+}
+.vote-container .title h3{
+  font-family: Arial;
+  font-weight: 500;
+  font-size: 13px;
+  text-align: center;
+  padding: 3px 0;
+  background-color: black;
+  color: white;
+}
+.vote-container  .qrcode-container{
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 50px 0;
+}
+.qrcode-container canvas{
+  width: 100px;
+  height: 100px;
+}
+.vote-container .qrcode-container::after{
+  content: "";
+  display:block;
+  width: 65%;
+  height: 65%;
+  position: absolute;
+  background:
+  linear-gradient(to right, black 4px, transparent 4px) 0 0,
+  linear-gradient(to right, black 4px, transparent 4px) 0 100%,
+  linear-gradient(to left, black 4px, transparent 4px) 100% 0,
+  linear-gradient(to left, black 4px, transparent 4px) 100% 100%,
+  linear-gradient(to bottom, black 4px, transparent 4px) 0 0,
+  linear-gradient(to bottom, black 4px, transparent 4px) 100% 0,
+  linear-gradient(to top, black 4px, transparent 4px) 0 100%,
+  linear-gradient(to top, black 4px, transparent 4px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  animation:code 1s infinite;
+}
+@keyframes code {
+  0%{
+    padding: 10px;
+  }
+  100%{
+    padding: 20px;
+  }
+}
+  .id-container{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    position: relative;
+  }
+  .id-container h2{
+    font-family: Arial;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color:#1e88e5;
+  }
+  .id-container h5{
+    font-family: Arial;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: .3px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .id-container p{
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: .3px;
+    font-size: 15px;
+  }
